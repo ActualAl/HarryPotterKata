@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterKata", "HarryPotterKata\HarryPotterKata.csproj", "{D2A8C994-6A98-44B1-833B-84C1A715016D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
