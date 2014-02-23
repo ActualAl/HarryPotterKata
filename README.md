@@ -1,2 +1,2 @@
-harry-potter-kata
+HarryPotterKata
 =================
