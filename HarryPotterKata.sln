@@ -1,7 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterKata", "HarryPotterKata\HarryPotterKata.csproj", "{D2A8C994-6A98-44B1-833B-84C1A715016D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{595B90A7-3A7E-46FE-B6EF-77811C5D8D28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{05CC92F8-880A-4DC7-AA8E-65312D10069F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterKata.BusinessLogic", "HarryPotterKata.BusinessLogic\HarryPotterKata.BusinessLogic.csproj", "{EC8919C7-F480-4CC0-835A-063F5900B248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterKata.Unit.Tests", "HarryPotterKata.Unit.Tests\HarryPotterKata.Unit.Tests.csproj", "{0CA081FB-E1A9-47EC-9615-7615CC43A47F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4D390861-D980-4D6D-A6FE-6F866BBFC8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterKata.Core", "HarryPotterKata.Core\HarryPotterKata.Core.csproj", "{F46C4306-001D-48E6-BB69-FB6C414674FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +19,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2A8C994-6A98-44B1-833B-84C1A715016D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8919C7-F480-4CC0-835A-063F5900B248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8919C7-F480-4CC0-835A-063F5900B248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8919C7-F480-4CC0-835A-063F5900B248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8919C7-F480-4CC0-835A-063F5900B248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA081FB-E1A9-47EC-9615-7615CC43A47F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA081FB-E1A9-47EC-9615-7615CC43A47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA081FB-E1A9-47EC-9615-7615CC43A47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA081FB-E1A9-47EC-9615-7615CC43A47F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46C4306-001D-48E6-BB69-FB6C414674FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46C4306-001D-48E6-BB69-FB6C414674FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46C4306-001D-48E6-BB69-FB6C414674FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46C4306-001D-48E6-BB69-FB6C414674FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CA081FB-E1A9-47EC-9615-7615CC43A47F} = {595B90A7-3A7E-46FE-B6EF-77811C5D8D28}
+		{EC8919C7-F480-4CC0-835A-063F5900B248} = {05CC92F8-880A-4DC7-AA8E-65312D10069F}
+		{F46C4306-001D-48E6-BB69-FB6C414674FE} = {4D390861-D980-4D6D-A6FE-6F866BBFC8AC}
 	EndGlobalSection
 EndGlobal
