@@ -130,6 +130,18 @@ namespace HarryPotterKata.Unit.Tests
 				new List<Book> { Book.One, Book.One, Book.Two, Book.Two, Book.Three, Book.Three, Book.Four, Book.Five },
 				(4 * Rules.DiscountFor(4) * Rules.UnitCost ) * 2);
 
+			inputAndExpected.Add(
+				new List<Book> 
+				{ 
+					Book.One, Book.One, Book.One, Book.One, Book.One,
+					Book.Two, Book.Two, Book.Two, Book.Two, Book.Two,
+					Book.Three, Book.Three, Book.Three, Book.Three,
+					Book.Four, Book.Four, Book.Four, Book.Four, Book.Four, 
+					Book.Five, Book.Five, Book.Five, Book.Five
+				},
+				((5 * Rules.DiscountFor(5) * Rules.UnitCost) * 3) + ((4 * Rules.DiscountFor(4) * Rules.UnitCost ) * 2)
+				);
+
 			for (var i = 0; i < inputAndExpected.Count; i ++)
 			{
 				var scenario = inputAndExpected.ElementAt(i);

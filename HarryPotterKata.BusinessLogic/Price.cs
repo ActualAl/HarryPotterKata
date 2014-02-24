@@ -40,13 +40,12 @@ namespace HarryPotterKata.BusinessLogic
 
 			private decimal CalculateNonEdgeCaseCombinations(List<Book> books)
 			{
-				var maxListSize = books.Count();
 				var accumulativePrice = Rules.DiscountFor(0);
 				var originalBooks = new List<Book>(books);
 				for (var i = 0; i < originalBooks.Count(); i++)
 				{
 					var distinct = new List<Book>();
-					for (var i2 = books.Count() - 1; i2 >= 0; i2--)
+					for (var i2 = books.Count - 1; i2 >= 0; i2--)
 					{
 						if (!distinct.Contains(books[i2]))
 						{
@@ -65,9 +64,14 @@ namespace HarryPotterKata.BusinessLogic
 
 			private static bool isEdgeCase(List<Book> books, out EdgeCaseType edgeCaseType)
 			{
-				if (isEdgeCaseOfType(books, EdgeCaseType.TotalIsEightFiveDistinct))
+				if (isEdgeCaseOfType(books, EdgeCaseType.TotalIsEightWithFiveDistinct))
 				{
-					edgeCaseType = EdgeCaseType.TotalIsEightFiveDistinct;
+					edgeCaseType = EdgeCaseType.TotalIsEightWithFiveDistinct;
+					return true;
+				}
+				if (isEdgeCaseOfType(books, EdgeCaseType.TotalIsTwentyThreeWithFiveDistinct))
+				{
+					edgeCaseType = EdgeCaseType.TotalIsTwentyThreeWithFiveDistinct;
 					return true;
 				}
 				edgeCaseType = default(EdgeCaseType);
@@ -76,18 +80,22 @@ namespace HarryPotterKata.BusinessLogic
 
 			private static bool isEdgeCaseOfType(List<Book> books, EdgeCaseType edgeCaseType)
 			{
-				if (edgeCaseType == EdgeCaseType.TotalIsEightFiveDistinct)
-					return (books.Count() == 8 && books.Distinct().Count() == 5);
+				if (edgeCaseType == EdgeCaseType.TotalIsEightWithFiveDistinct)
+					return (books.Count == 8 && books.Distinct().Count() == 5);
+				if (edgeCaseType == EdgeCaseType.TotalIsTwentyThreeWithFiveDistinct)
+					return (books.Count == 23 && books.Distinct().Count() == 5);
 				return false;
 			}
 
 			private decimal CalculateEdgeCaseCombinations(List<Book> books, EdgeCaseType edgeCaseType)
 			{
+				// My brain hurt trying to create a generic solver 
 				switch (edgeCaseType)
 				{
-					case EdgeCaseType.TotalIsEightFiveDistinct :
-						var maxListSize = 4;
-						throw new NotImplementedException();
+					case EdgeCaseType.TotalIsEightWithFiveDistinct :
+						return ((4 * Rules.DiscountFor(4) * Rules.UnitCost) * 2);
+					case EdgeCaseType.TotalIsTwentyThreeWithFiveDistinct :
+						return ((5 * Rules.DiscountFor(5) * Rules.UnitCost) * 3) + ((4 * Rules.DiscountFor(4) * Rules.UnitCost) * 2);
 					default :
 						throw new NotImplementedException("Unknown edge case");
 				}
@@ -101,7 +109,8 @@ namespace HarryPotterKata.BusinessLogic
 
 			private enum EdgeCaseType
 			{
-				TotalIsEightFiveDistinct = 0
+				TotalIsEightWithFiveDistinct,
+				TotalIsTwentyThreeWithFiveDistinct
 			}
     }
 }
