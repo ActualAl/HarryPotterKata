@@ -12,7 +12,7 @@ namespace HarryPotterKata.BusinessLogic
 			public decimal Calculate(List<Book> books)
 			{
 				if (books == null)
-					throw new ArgumentException(Strings.ErrorMessages.NoBooksSubmitted);
+					throw new ArgumentException("No books submitted");
 				if (!books.Any())
 					return 0M;
 				if (books.Count == 1)

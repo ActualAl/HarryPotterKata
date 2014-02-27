@@ -42,7 +42,6 @@
     <Compile Include="Rules.cs" />
     <Compile Include="Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HarryPotterKata.Core\HarryPotterKata.Core.csproj">

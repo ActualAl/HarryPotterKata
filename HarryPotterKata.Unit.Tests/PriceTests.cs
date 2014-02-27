@@ -31,7 +31,7 @@ namespace HarryPotterKata.Unit.Tests
 			Action testAction = () => _price.Calculate(books);
 			
 			//Assert
-			testAction.ShouldThrow<ArgumentException>("No error thrown for null books").WithMessage(Strings.ErrorMessages.NoBooksSubmitted);
+			testAction.ShouldThrow<ArgumentException>("No error thrown for null books").WithMessage("No books submitted");
 		}
 
 		[Test]
